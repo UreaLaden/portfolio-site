@@ -9,7 +9,12 @@ export const styles = mergeStyleSets({
     height:'100%',
     backgroundColor:Colors.BLACK,
   },
-  sectionContainer:{
+  sectionContainerHeader:{
+    height:"100%",
+    width:'90%',    
+    marginBottom:"5%"
+  },
+  sectionContainerSkills:{
     height:"100%",
     width:'90%',    
   }

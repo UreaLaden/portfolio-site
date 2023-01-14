@@ -12,7 +12,7 @@ export const styles = mergeStyleSets({
     introHeader:{
         ...Fonts.ExtraLarge,
         color:Colors.WHITE,
-        lineHeight:"80px"
+        lineHeight:'1vw',
     },
     introHeaderContainer:{
         gridRow:"2/ span 3",
@@ -23,21 +23,27 @@ export const styles = mergeStyleSets({
     },
     introHeaderDescription:{
         display:'grid',
-        gridTemplate:"1fr / 3fr 2fr",
+        gridTemplate:"1fr / 2fr 2fr",
         ...Fonts.Large,
         fontWeight:700,
         color:Colors.WHITE,
-        paddingTop:"5%"
+        padding:"2% 0"
     },
     introContactContainer:{
         display:'flex',
         alignItems:"flex-start",
-        justifyContent:'start'
+        justifyContent:'start',
+        paddingTop:"2%"
     },
     introContact:{
         ...Fonts.Medium,
+        fontWeight:600,
         color:Colors.WHITE,
-        borderBottom:`3px solid ${Colors.TURQOISE}`        
+        borderBottom:`3px solid ${Colors.TURQOISE}`,
+        lineHeight:'48px',
+        ":hover":{
+            color:Colors.TURQOISE
+        }
     },
     introCircle:{
         border:"3px solid white",
@@ -72,7 +78,8 @@ export const styles = mergeStyleSets({
         gridRow:"2 / span 1",
         gridColumn:'1 / 1',
         color:Colors.WHITE,
-        ...Fonts.Large
+        ...Fonts.Large,
+        fontWeight:"600",
 
     },
     introDescription:{

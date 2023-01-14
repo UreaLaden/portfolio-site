@@ -1,13 +1,17 @@
 import * as React from "react";
 import { styles } from "./App.css";
 import Intro from "./components/Intro/Intro";
+import { Skills } from "./components/Skills/Skills";
 
 function App() {
   return (
     <div className={styles.appContainer}>
-      <div className={styles.sectionContainer}>
+      <section className={styles.sectionContainerHeader}>
         <Intro/>
-      </div>
+      </section>
+      <section className={styles.sectionContainerSkills}>
+        <Skills/>
+      </section>
     </div>
   );
 }

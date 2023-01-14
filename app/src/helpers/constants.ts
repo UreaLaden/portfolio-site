@@ -11,18 +11,19 @@ export const enum Colors{
 export const Fonts = {
     Large:{
         fontFamily:"Space Grotesk",
-        fontSize:'28px',
-        lineHeight:"32px",
+        fontSize:'2vw',
+        lineHeight:"2.5vw",
         fontWeight:600
     },
     Medium:{
         fontFamily:"Space Grotesk Light",
-        fontSize:'12px',
-        lineHeight:"28px"
+        fontSize:'1.2vw',
+        lineHeight:"28px",
+        fontWeight:600
     },
     ExtraLarge:{
         fontFamily:"Space Grotesk Medium",
-        fontSize:'10rem',
-        lineHeight:"88px"
+        fontSize:'6vw',
+        fontWeight:700
     }
 }
