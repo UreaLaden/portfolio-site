@@ -1,18 +1,19 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing:border-box;
 }
 
-html {
-  height: 100%
+html,body {
+  height: 100%;
+  width:100%;
+  overflow:auto;
 }
 
 body {
-  margin: 0;
   font-family: 'Space Grotesk Medium', 'Space Grotesk', 'Space Grotesk Light';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
 }
 
 code {
@@ -22,4 +23,8 @@ code {
 
 #root {
   height: 100%;
+  width:100%;
+}
+header{
+  margin-bottom:5vh;
 }

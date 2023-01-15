@@ -3,48 +3,41 @@ import { Colors, Fonts } from "../../helpers/constants";
 
 export const styles = mergeStyleSets({
     introContainer:{
+        gridRow:'1 / 6',
+        gridColumn:'1 / -1',
         display:"grid",
-        gridTemplate:"15% repeat(4,1fr) / repeat(2, 2fr) 1fr",
-        position:'relative',
-        height:"65vh"
+        "@media screen and (min-width:1400px)":{
+            gridTemplate:"repeat(5,1fr) .5fr / repeat(7,1fr) 2rem",
+        }
     },
     loopParentContainer:{},
     introHeader:{
         ...Fonts.ExtraLarge,
         color:Colors.WHITE,
-        lineHeight:'1vw',
+        lineHeight:'1em',
     },
     introHeaderContainer:{
-        gridRow:"2/ span 3",
-        gridColumn:"1 / span 4",
+        gridRow:"2/ span 4",
+        gridColumn:"1 / span 6",
         display:'grid',
         gridTemplate:"repeat(2,2fr) repeat(2,3fr) / 2fr",
         "z-index":5
     },
     introHeaderDescription:{
-        display:'grid',
-        gridTemplate:"1fr / 2fr 2fr",
-        ...Fonts.Large,
+        ...Fonts.Medium,
         fontWeight:700,
         color:Colors.WHITE,
         padding:"2% 0"
     },
+    introHeaderDescriptionContainer:{
+        gridRow:'4 / span 2',
+        gridColumn:"1 / span 3"
+    },
     introContactContainer:{
-        display:'flex',
-        alignItems:"flex-start",
-        justifyContent:'start',
-        paddingTop:"2%"
+        gridRow:'5 / span 1',
+        gridColumn:'1 / 1'
     },
-    introContact:{
-        ...Fonts.Medium,
-        fontWeight:600,
-        color:Colors.WHITE,
-        borderBottom:`3px solid ${Colors.TURQOISE}`,
-        lineHeight:'48px',
-        ":hover":{
-            color:Colors.TURQOISE
-        }
-    },
+
     introCircle:{
         border:"3px solid white",
         borderRadius:"100%",
@@ -63,16 +56,23 @@ export const styles = mergeStyleSets({
         position:'relative'
     },
     logoContainer:{
-        gridRow:"2 / span 1",
-        gridColumn:"1 / 1",
+        gridRow:"1 / span 1",
+        gridColumn:"-4 / span 2",
         "z-index":5,
         display:'grid',
-        gridTemplate:'1fr / repeat(2,1fr)'
+        gridTemplate:'repeat(3,1fr) / repeat(2,1fr)',
     },
     username:{
+        gridRow:"2 / span 1",
+        gridColumn:"1 / span 2",
+        ...Fonts.Medium,
+        color:Colors.WHITE,
+        display:"flex",
+        alignItems:'center'
+    },
+    usernameContainer:{
         display:'grid',
-        gridTemplate:"repeat(2,1fr) / 1fr",
-        position:'relative'
+        gridTemplate:"repeat(3,1fr) / repeat(2, 1fr)"
     },
     tag:{
         gridRow:"2 / span 1",
@@ -90,14 +90,15 @@ export const styles = mergeStyleSets({
         textDecoration:`underline solid ${Colors.TURQOISE}`
     },
     introImage:{
-        gridRow:"1 / span 4",
-        gridColumn: "-1 / span 1",
-        height:'inherit'        
+        backgroundColor:Colors.BLUE,
+        gridRow:"1 / -1",
+        gridColumn: "6 / 8",
+        height:'100%'
     },
     logo:{
     },
     logoChildContainer:{
-        gridRow:"1 / span 1",
+        gridRow:"2 / span 1",
         gridColumn:"2 / span 1",
         display:'flex',
         alignItems:'center',

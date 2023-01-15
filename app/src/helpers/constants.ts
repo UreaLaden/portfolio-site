@@ -17,13 +17,13 @@ export const Fonts = {
     },
     Medium:{
         fontFamily:"Space Grotesk Light",
-        fontSize:'1.2vw',
-        lineHeight:"28px",
+        fontSize:'1.75rem',
+        lineHeight:"2.5vh",
         fontWeight:600
     },
     ExtraLarge:{
         fontFamily:"Space Grotesk Medium",
-        fontSize:'6vw',
+        fontSize:'5.25vw',
         fontWeight:700
     }
 }
