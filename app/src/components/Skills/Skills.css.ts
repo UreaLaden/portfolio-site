@@ -9,6 +9,7 @@ export const styles = mergeStyleSets({
         borderTop:`3px solid ${Colors.WHITE}`,
         gridTemplate:"repeat(2,1fr) / repeat(3,1fr)",
         alignItems:"center",
+        position:'relative',
         color:Colors.WHITE,
         "@media screen and (min-width:1400px)":{
             gridTemplate:"repeat(2,1fr) / repeat(3,1fr)",

@@ -6,6 +6,7 @@ export const styles = mergeStyleSets({
         gridRow:'1 / 6',
         gridColumn:'1 / -1',
         display:"grid",
+        position:'relative',
         "@media screen and (min-width:1400px)":{
             gridTemplate:"repeat(5,1fr) .5fr / repeat(7,1fr) 2rem",
         }
@@ -37,7 +38,18 @@ export const styles = mergeStyleSets({
         gridRow:'5 / span 1',
         gridColumn:'1 / 1'
     },
-
+    socialHeader:{
+        gridRow:"1 / span 1",
+        gridColumn:"-2 / 1",
+        "z-index":5,
+        display:'grid',
+        gridTemplate:".5fr repeat(2,1fr) / repeat(7,1fr)"
+    },
+    socialItems:{
+        gridRow:"2 / span 1",
+        gridColumn:"1 / -1",
+        display:'grid',
+    },
     introCircle:{
         border:"3px solid white",
         borderRadius:"100%",
@@ -62,17 +74,10 @@ export const styles = mergeStyleSets({
         display:'grid',
         gridTemplate:'repeat(3,1fr) / repeat(2,1fr)',
     },
-    username:{
-        gridRow:"2 / span 1",
-        gridColumn:"1 / span 2",
-        ...Fonts.Medium,
-        color:Colors.WHITE,
-        display:"flex",
-        alignItems:'center'
-    },
+    
     usernameContainer:{
         display:'grid',
-        gridTemplate:"repeat(3,1fr) / repeat(2, 1fr)"
+        gridTemplate:"repeat(3,1fr) / repeat(2, 1fr)",
     },
     tag:{
         gridRow:"2 / span 1",

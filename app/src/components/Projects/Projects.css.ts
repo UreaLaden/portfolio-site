@@ -2,74 +2,56 @@ import { mergeStyleSets } from "@fluentui/react";
 import { Colors, Fonts } from "../../helpers/constants";
 
 export const styles = mergeStyleSets({
-  projectContainer: {
-    display: "grid",
-    height: "100%",
-    gridTemplate: "repeat(3,1fr) / repeat(2,40%)",
-    "@media screen and (min-width:1400px)": {
-      gridTemplate: "repeat(3,1fr) / repeat(2,1fr)",
-      columnGap: "1.5em",
-      rowGap: "20em",
-    },
-    "@media screen and (max-width:1400px)":{
-      gridTemplate: "repeat(3,30%) / repeat(2,1fr)",
-      columnGap: "1.5em",
-      rowGap: "20em",
-    },
-    "@media screen and (max-width:750)": {},
-  },
-  project1: {
-    gridRow: "1 / span 1",
-    gridColumn: "1 / span 1",
-    display: "flex",
-    flexDirection: "column",
-  },
-  project2: {
-    gridRow: "1 / span 1",
-    gridColumn: "2 / span 1",
-    display: "flex",
-    flexDirection: "column",
-  },
-  project3: {
-    gridRow: "2 / span 1",
-    gridColumn: "1 / span 1",
-    display: "flex",
-    flexDirection: "column",
-  },
-  project4: {
-    gridRow: "2 / span 1",
-    gridColumn: "2 / span 1",
-    display: "flex",
-    flexDirection: "column",
-  },
-  project5: {
-    gridRow: "3 / span 1",
-    gridColumn: "1 / span 1",
-    display: "flex",
-    flexDirection: "column",
-  },
-  project6: {
-    gridRow: "3 / span 1",
-    gridColumn: "2 / span 1",
-    display: "flex",
-    flexDirection: "column",
+  projectContainerInner: {
+    display:'grid',
+    gridTemplate:"4fr .5fr .5fr / 1fr",
+    position:'relative'
   },
   projectImage: {
     width: "100%",
     marginBottom: "2%",
+    gridRow:'1 / span 1',
+    gridColumn:"1 / span 1"
   },
   projectSubHeader: {
-    ...Fonts.Medium,
+    ...Fonts.Large,
     textAlign: "left",
     fontWeight: "700",
     color: Colors.WHITE,
+    gridRow:"2 / span 1",
+    gridColumn:"1 / span 1"
   },
   projectSubHeaderTextContainer: {
     display: "grid",
     gridTemplate: "1fr / repeat(6,1fr)",
+    gridRow:"3 / span 1",
+    gridColumn:"1 / span 1"
   },
   projectSubHeaderText: {
     ...Fonts.Medium,
     color: Colors.WHITE,
+  },
+  projectOverlay:{
+    opacity:0,
+    gridRow:"1 / -3",
+    gridColumn:'1 / -1',
+    "z-index":10,
+    backgroundColor:'rgba(0,0,0,0.9)',
+    display:"grid",
+    gridTemplate:'repeat(6,1fr) / repeat(4,1fr)',
+    alignItems:'center',
+    justifyItems:'center',
+    transition:"opacity .25s",
+    ":hover":{
+      opacity:1
+    }
+  },
+  overlayItem1:{
+    gridRow:"3 / span 1",
+    gridColumn:"2 / span 2",
+  },
+  overlayItem2:{
+    gridRow:"4 / span 1",
+    gridColumn:"2 / span 2",
   },
 });

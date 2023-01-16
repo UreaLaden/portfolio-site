@@ -1,3 +1,4 @@
+import Loops from "../Loops/Loops"
 import { styles } from "./Skills.css"
 
 const skills = [
@@ -12,7 +13,7 @@ const skills = [
 export const Skills = () =>{
     return (<div className={styles.skillsContainer}>
         {skills.map((value,index) => {
-            return (<div className={styles.subContainer}>
+            return (<div key={index} className={styles.subContainer}>
                 <div className={styles.subHeader}>{value.name}</div>
                 <div className={styles.subHeaderText}>{value.experience} Years Experience</div>
             </div>)

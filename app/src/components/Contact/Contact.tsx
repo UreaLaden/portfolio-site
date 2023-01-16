@@ -1,6 +1,10 @@
 import { styles } from "./Contact.css";
 
-export const Contact = (props: any) => {
+export interface IContactProps{
+  text:string;
+}
+
+export const Contact = (props: IContactProps) => {
   const { text } = props;
   return (
     <div className={styles.contactContainer}>
